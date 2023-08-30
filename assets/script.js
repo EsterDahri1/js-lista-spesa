@@ -32,7 +32,23 @@ const groceryList = [
 ];
 console.log(groceryList);
 
+//Enunciate the element in DOM
+let ulistDOM = document.querySelector('.list');
+//console.log(ulistDOM);
+
+let i = 0;
 //use while to create loop
-//Print on page by using query selector of ul
+while (i < groceryList.length) {
+    const products = groceryList[i];
+    console.log(products);
+
+    let listItem = `<li>${products}</li>`;
+
+    ulistDOM.insertAdjacentHTML('beforeend', listItem);
+
+
+    i++
+}
+
 
 
